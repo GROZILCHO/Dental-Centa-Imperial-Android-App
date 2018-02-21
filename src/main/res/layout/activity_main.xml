@@ -5,42 +5,28 @@
     android:id="@+id/activity_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorPrimaryLight"
     android:gravity="top|center_vertical"
-    android:orientation="vertical"
-    tools:context="com.example.roskata.dentalclinicimperial.MainActivity">
+    tools:context="com.example.roskata.dentalclinicimperial.MainActivity"
+    android:weightSum="7">
 
     <include
         android:id="@+id/my_toolbar"
-        layout="@layout/toolbar" />
+        layout="@layout/toolbar"
+        />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="201dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/my_toolbar" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+    <include
+        android:id="@+id/my_scroll_view"
+        layout="@layout/scroll_view"/>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hello World!"
-                android:visibility="visible" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Hello World!"/>
-
-        </LinearLayout>
-    </ScrollView>
 
 
 
