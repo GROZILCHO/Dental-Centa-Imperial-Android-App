@@ -3,38 +3,197 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="0dp"
-    android:layout_weight="2"
-    android:orientation="vertical">
+    android:layout_weight="8"
+    android:orientation="vertical"
+    android:layout_marginLeft="2dp"
+    android:layout_marginRight="2dp"
+    android:background="@drawable/shape"
+    >
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="139dp">
+        android:layout_margin="2dp">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
+                android:id="@+id/website"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="@dimen/slider_margin">
+                android:padding="@dimen/slider_margin"
+                android:background="@drawable/border"
+                android:layout_marginBottom="5dp">
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/map"/>
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/globe"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="qwerqrttw rtkywkr asdfgads adfbgd adtrg btrsrbbsrfbfds"
-                    android:textSize="18sp" />
+                    android:text="@string/link_to_website"
+                    android:textSize="@dimen/scrollbar_text_size"
+                    android:padding="@dimen/slider_margin"
+                    android:textColorLink="@color/colorSecondaryText"
+                    android:autoLink="web"/>
 
             </LinearLayout>
 
-        </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/slider_margin"
+                android:background="@drawable/border"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/map"
+                    />
+
+                <TextView
+                    android:id="@+id/map"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/link_to_google_maps"
+                    android:textSize="@dimen/scrollbar_text_size"
+                    android:paddingLeft="@dimen/slider_margin"
+                    android:textColorLink="@color/colorSecondaryText"
+                    android:autoLink="all"
+                    android:focusable="true"
+                    android:clickable="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/slider_margin"
+                android:background="@drawable/border"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/phone"
+                    />
+                <LinearLayout
+                    android:id="@+id/phones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="0dp"
+                    android:gravity="fill_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tel_359_52_600_955"
+                        android:textSize="@dimen/scrollbar_text_size"
+                        android:paddingLeft="@dimen/slider_margin"
+                        android:textColorLink="@color/colorSecondaryText"
+                        android:autoLink="all"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:linksClickable="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mob_359_893_600_955"
+                        android:textSize="@dimen/scrollbar_text_size"
+                        android:paddingLeft="@dimen/slider_margin"
+                        android:textColorLink="@color/colorSecondaryText"
+                        android:autoLink="all"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:linksClickable="true"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/working_hours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/slider_margin"
+                android:background="@drawable/border"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/clock"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/schedule"
+                        android:textSize="@dimen/scrollbar_text_size"
+                        android:paddingLeft="@dimen/slider_margin"
+                        android:textColorLink="@color/colorSecondaryText"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/work_time"
+                        android:textSize="@dimen/scrollbar_text_size"
+                        android:paddingLeft="@dimen/slider_margin"
+                        android:textColorLink="@color/colorSecondaryText"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/working_days"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="@dimen/slider_margin"
+                android:background="@drawable/border"
+                android:layout_marginBottom="5dp">
+
+                <ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/calendar"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contact_us"
+                    android:textSize="@dimen/scrollbar_text_size"
+                    android:paddingLeft="@dimen/slider_margin"
+                    android:textColorLink="@color/colorSecondaryText"
+                    android:autoLink="web"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:linksClickable="true"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
     </ScrollView>
 
 </LinearLayout>
