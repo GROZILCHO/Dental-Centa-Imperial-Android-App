@@ -1,12 +1,12 @@
 package com.example.roskata.dentalclinicimperial;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.text.method.LinkMovementMethod;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.Timer;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setTitle("Dental Center Imperial");
-        getSupportActionBar().setIcon(getDrawable(R.drawable.logo));
+        getSupportActionBar().setIcon(getDrawable(R.drawable.imperial_logo));
 
         //View Pager
         viewPager = (ViewPager) findViewById(R.id.viewPager);
@@ -37,7 +37,29 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(viewPagerAdapter);
 
         Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 4000);
+        timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 5000);
+
+        final TextView map = (TextView) findViewById(R.id.map);
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
+                myWebLink.setData(Uri.parse("https://goo.gl/maps/pDDf7AAHCWk"));
+                startActivity(myWebLink);
+            }
+
+        });
+
+        TextView working_days = (TextView) findViewById(R.id.working_days);
+        working_days.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
+                myWebLink.setData(Uri.parse("http://www.dentalimperial.com/contacts"));
+                startActivity(myWebLink);
+            }
+        });
+
 
     }
 

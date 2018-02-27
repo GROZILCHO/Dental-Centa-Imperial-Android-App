@@ -13,13 +13,13 @@
     <string name="schedule">Monday to Friday</string>
     <string name="work_time">9am - 7pm</string>
     <string name="contact_us">
-         <a href="http://www.dentalimperial.com/contacts/">
+         <a href="http://www.dentalimperial.com/contacts">
             Get in touch with us!
         </a>
     </string>
     <string name="tel_359_52_600_955">
         <a href="tel: 359 52 600 955">
-            tel: +359 52 600 955
+            tel:   +359 52 600 955
         </a>
     </string>
     <string name="mob_359_893_600_955">
@@ -28,4 +28,10 @@
             mob: +359 893 600 955
         </a>
     </string>
+    <string name="phone_icon">phone_icon</string>
+    <string name="clock_icon">clock_icon</string>
+    <string name="fb_logo">fb-logo</string>
+    <string name="designer_logo">designer_logo</string>
+    <string name="creative_studio">Creative Studio:</string>
+    <string name="slider">slider</string>
 </resources>
