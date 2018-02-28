@@ -1,21 +1,15 @@
 <resources>
     <string name="app_name">Dental Clinic Imperial</string>
     <string name="link_to_website">
-        <a href="http://www.dentalimperial.com">
-            www.dentalimperial.com
-        </a>
+        www.dentalimperial.com
     </string>
     <string name="link_to_google_maps">
-        <a href="https://goo.gl/maps/pDDf7AAHCWk">
-            18 Todor Dimov, Str. Varna, Bulgaria
-         </a>
+        18 Todor Dimov, Str. Varna, Bulgaria
     </string>
     <string name="schedule">Monday to Friday</string>
     <string name="work_time">9am - 7pm</string>
     <string name="contact_us">
-         <a href="http://www.dentalimperial.com/contacts">
             Get in touch with us!
-        </a>
     </string>
     <string name="tel_359_52_600_955">
         <a href="tel: 359 52 600 955">
