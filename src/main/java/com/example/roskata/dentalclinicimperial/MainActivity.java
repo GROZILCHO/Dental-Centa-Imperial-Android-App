@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(viewPagerAdapter);
 
         Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new MyTimerTask(), 2000, 5000);
+        timer.scheduleAtFixedRate(new MyTimerTask(), 3500, 5000);
 
         final TextView web = (TextView) findViewById(R.id.web);
         web.setOnClickListener(new View.OnClickListener() {
@@ -62,8 +62,8 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
-        final TextView working_days = (TextView) findViewById(R.id.working_days);
-        working_days.setOnClickListener(new View.OnClickListener() {
+        final TextView calendar = (TextView) findViewById(R.id.working_days);
+        calendar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent myWebLink = new Intent(android.content.Intent.ACTION_VIEW);
-                myWebLink.setData(Uri.parse("https://www.facebook.com/dentalimperial/"));
+                myWebLink.setData(Uri.parse("https://www.facebook.com/dentalimperial/m"));
                 startActivity(myWebLink);
             }
         });

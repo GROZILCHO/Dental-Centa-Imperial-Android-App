@@ -51,7 +51,6 @@
                     android:textSize="@dimen/scrollbar_text_size"
                     android:padding="@dimen/slider_margin"
                     android:layout_marginBottom="@dimen/icon_padding"
-                    android:textColorLink="@color/colorSecondaryText"
                     android:gravity="center_vertical"
                     />
 
